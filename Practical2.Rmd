@@ -1,0 +1,115 @@
+---
+title: "Practical 2: T-tests and Correlations"
+subtitle: "Introduction to R and Rstudio"
+output: html_notebook
+---
+
+#Introduction
+
+This is assignment copy for Practical 2, the solutions copy is names `Practical2Solutions.Rmd`.
+For queries, please email `shane.galvin@ucc.ie`.
+
+This data is a portion of a larger data set available from:
+https://drive.google.com/file/d/0Bz-rhZ21ShvOdW1wV0pmUTJSSk0/view
+
+The parent site is:
+https://sites.trinity.edu/osl/data-sets-and-activities/t-test-activities
+
+Data originally published as:
+
+Does Music Convey Social Information to Infants?
+
+Original article: Mehr, S. A., Song. L. A., & Spelke, E. S. (2016). For 5-month-old infants, melodies are social. Psychological Science, 27, 486-501.
+
+available at:
+http://journals.sagepub.com/stoken/default+domain/d5HcBHg85XamSXGdYqYN/full
+
+## Aim:
+To compare
+This study compared infant gaze a
+"First, the infant viewed side-by-side high-definition video recordings of the two unfamiliar individuals, smiling with direct gaze at the infant, for 16 s (baseline trial). Then, the infant viewed, in turn, one 22-s video of each of the two individuals singing one of the two songs while continuing to look and smile at the infant. 
+Finally, the infant viewed a silent 16-s test trial that was identical to the baseline trial. A looming object with an attractive sound effect brought the infant’s eyes to the center of the screen before the baseline and test trials"
+
+"At test, however, the infants selectively attended to the now-silent singer of the song with the familiar melody; the proportion of time during which they looked toward ... greater than the proportion at baseline
+(difference in proportion of looking: M = .072, SD = .169,
+95% CI = [.011, .133]), t(31) = 2.42, p = .022, d = 0.43" (p4 in.pdf version)
+
+This practical will use proportion of gaze timebaseline data with final condition of the silent 16-s test.
+
+IV: Proportion of Gaze Time
+DV: Baseline (Control), Experimental Condition (Silent Singers)
+The aims of this practical are as follows:
+
+- 0 Read in the Data File
+- 1 Summarise Data by group|total Means and StDec in particular
+- 2 Visualise Data by group|total Histograms and a boxplot
+- 3 Perform a REPEATED MEASURES t-test using the `t.test()` function
+- 4 Calculate the appropriate effect size measure with the `effsize` package
+- 5 Calculate the POST-HOC Power with the `pwr` package
+
+You may looad and use the following packages:
+`psych`, `summarytools`,`pwr` and `effsize`
+Make liberal use of the helper function, either through pressing F1 during autocomplete, or using`?t.test` or any other function.
+You can also compile this into a rendered HTMLbook by clicking the preview button on the task bar above this script.
+```{r}
+
+```
+
+#Practical
+
+##0 Read the data file `"Practical2Data.csv"` into an object names p2d, then print out the dataframe
+```{r}
+```
+
+##1 Summarise data 
+```{r}
+```
+
+Note the Means and Standard Deviations for each group and the total
+
+##2 Visualise Data
+```{r}
+```
+
+comment on the distributions and histograms:
+
+
+##3 Perform F test
+```{r}
+```
+Note if the variances are equal
+
+
+##4 Normality
+
+Use the Shapiro-Wilks test for all the Proportion data
+```{r}
+
+```
+
+
+use the Shapiro-Wilks test on the Proportion data for the Baseline condition
+```{r}
+```
+
+
+Use the Shapiro-Wilks test on the Proportion data for the Experimental condition
+```{r}
+```
+
+
+# Repeated samples t.test
+
+inside the t.test function you will have to use the `paired=TRUE` argument for the t test to run 
+```{r}
+```
+
+## Effect size
+Now Calulate the effect size using the `effsize` package
+```{r}
+```
+
+## Post-hoc Power
+```{r}
+```
+
